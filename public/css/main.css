@@ -8,11 +8,23 @@ body{
     color: white;
     background:  #222 ;
 }
-#poke{
+#sauron{
    max-width: 400px;
     max-height: 400px;
     position: 100vh;
 }
+
+#sa{
+    max-width: 400px;
+     max-height: 400px;
+     position: 100vh;
+ }
+
+ #sa2{
+    max-width: 400px;
+     max-height: 400px;
+     position: 100vh;
+ }
 
 #gif{
     max-width: 400px;
