@@ -3,14 +3,18 @@ const app = express();
 
 const port = 3000;
 
+app.set("view engine","ejs");
+app.set("views",__dirname + "/views");
+
 app.use(express.static(__dirname + '/public'))
 app.get('/',(req,res)=>{
     // console.log(__dirname);
-    res.send('Pero que chucha')
+    // res.send('Pero que chucha')
+    res.render("index",{titutilo:"Pero que chucha"})
 })
 
-app.get('/servicios',(req,res)=>{
-    res.send('Estas en servicios')
+app.get('/info',(req,res)=>{
+    res.render("info",{titulo: "Informacion"})
 })
 
 app.get('/servicios',(req,res)=>{
@@ -18,7 +22,10 @@ app.get('/servicios',(req,res)=>{
 })
 
 app.use((req,res,next)=>{
-    res.status(404).sendFile(__dirname + "/public/404.html")
+    res.status(404).render("404",{
+        titulo: "404",
+        descripcion:"Pero que chuuuu"
+    })
 })
 
 app.listen(port,()=>{

@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejs</title>
-</head>
-<body>
-    <h1><%= titulito %></h1>
-</body>
-</html>
+<%- include("template/head",{tituloWeb: "Inicio" })%>
+<div class="container text-center">
+    <h1><%= titutilo %></h1>
+    <img src="/img/poki.png" alt="pokebola" id="poke"">
+</div>
+<%- include("template/footer")%>
