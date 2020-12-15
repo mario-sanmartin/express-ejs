@@ -10,11 +10,14 @@ app.use(express.static(__dirname + '/public'))
 app.get('/',(req,res)=>{
     // console.log(__dirname);
     // res.send('Pero que chucha')
-    res.render("index",{titutilo:"Pero que chucha"})
+    res.render("index",{titutilo:"Sauron con 2 meses"})
 })
 
 app.get('/info',(req,res)=>{
-    res.render("info",{titulo: "Informacion"})
+    res.render("info",{
+        titulo: "Información",
+        info: "Sauron el señor Oscuro"
+    })
 })
 
 app.get('/servicios',(req,res)=>{
