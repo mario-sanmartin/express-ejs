@@ -1,5 +1,5 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router(); //Router es un middleware que viene con express
 
 router.get('/',(req,res)=>{
     // console.log(__dirname);
