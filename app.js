@@ -7,23 +7,11 @@ app.set("view engine","ejs");
 app.set("views",__dirname + "/views");
 
 app.use(express.static(__dirname + '/public'))
-app.get('/',(req,res)=>{
-    // console.log(__dirname);
-    // res.send('Pero que chucha')
-    res.render("index",{titutilo:"Sauron con 2 meses"})
-})
 
-app.get('/info',(req,res)=>{
-    res.render("info",{
-        titulo: "Información",
-        info: "Sauron el señor Oscuro"
-    })
-})
+//Rutas de la app
+app.use('/',require('./router/rutas'))
 
-app.get('/servicios',(req,res)=>{
-    res.send('Estas en servicios')
-})
-
+//si tiene la palabra "use" estamos usando un middleware de express
 app.use((req,res,next)=>{
     res.status(404).render("404",{
         titulo: "404",
