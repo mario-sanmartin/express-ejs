@@ -31,3 +31,18 @@ body{
      max-height: 400px;
      position: 100vh;
  }
+
+
+ .flex-container{
+     display: flex;
+    /* flex-direction: column; */
+    /* flex-wrap: wrap-reverse; */
+    justify-content: space-around;
+     border: 2px solid black;
+ }
+
+ .flex-container div {
+     text-align: center;
+     border: 2px solid black;
+     padding: 10px;
+ }
