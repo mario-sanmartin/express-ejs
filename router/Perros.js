@@ -35,7 +35,8 @@ router.post('/',async(req,res)=>{
     try {
         const mascotaDB = new Mascota (body) //contruimos una nueva mascota
         await mascotaDB.save()
-        console.log('Mascota Creada Nazi ',mascotaDB);
+        // console.log('Mascota Creada Nazi ',mascotaDB);
+        res.redirect('/mascotas')
     } catch (error) {
         console.log(e);
     }
