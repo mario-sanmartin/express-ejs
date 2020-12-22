@@ -1,6 +1,15 @@
 const express = require('express');
+const bodyParser =require('body-parser');
 const app = express();
 
+//para procesar formularios
+app.use(bodyParser.urlencoded({ extended: false}))
+
+//datos json
+app.use(bodyParser.json())
+
+
+//variables de entorno
 require('dotenv').config();
 
 const port = process.env.PORT || 3000;
