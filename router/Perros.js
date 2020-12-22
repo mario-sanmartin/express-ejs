@@ -32,7 +32,13 @@ router.get('/crear',(req,res)=>{
 
 router.post('/',async(req,res)=>{
     const body = req.body
-    console.log(body)
+    try {
+        const mascotaDB = new Mascota (body) //contruimos una nueva mascota
+        await mascotaDB.save()
+        console.log('Mascota Creada Nazi ',mascotaDB);
+    } catch (error) {
+        console.log(e);
+    }
 })
 
 
